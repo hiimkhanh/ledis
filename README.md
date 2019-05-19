@@ -21,8 +21,6 @@ Heroku
 * The architecture of Ledis is very simple. It has a controller whose name is CacheController extends ApplicationController. It used Rails.cache to implement and store data on RAM. Behind the sense, Ledis supported some special data structure to retrive also save data to memory. The picture below is Ledis's architecture: 
 
 ![Image of Yaktocat](https://i.imgur.com/8PeTyc2.png)
-
-* At the
                                                                                                                       
 ## Usage
 Similar to Redis, Ledis also has some basic method. I implemented throgh API, I think that is good, because the core value of assignment is how to use cache and build data structure to increase application's performance.
