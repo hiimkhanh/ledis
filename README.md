@@ -11,9 +11,13 @@ Ruby just like you would use any other general-purpose scripting language.A few 
 
 ## Support
 Rails 5.2
+
 Ruby 2.5
+
 Rails cache
+
 Dalli gem
+
 Heroku
 
 ## Design
