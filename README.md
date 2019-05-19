@@ -16,6 +16,7 @@ Ruby just like you would use any other general-purpose scripting language.A few 
                                                                                                                       
 ## Usage
 Similar to Redis, Ledis also has some basic method. I implemented throgh API, I think that is good, because the core value of assignment is how to use cache and build data structure to increase application's performance.
+
 **1. String:**
 
 API | Parameters | Method | Description
@@ -44,6 +45,7 @@ API | Parameters | Method | Description
 ``` /sinter ``` | ``` key1, key2 ```| **POST** | Set intersection among all set stored in specified keys. Return array of members of the result set
 
 **4. Data expire**
+
 API | Parameters | Method | Description
 ------------ | ------------- | ------------- | -------------
 ``` /keys ``` || **POST** | List all available keys
