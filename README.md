@@ -82,3 +82,4 @@ API | Parameters | Method | Description
 ## Limitation
 * Not implement snapshot and restore cache.
 * Not same behavior with Redis, must improve more.
+* Not verify all case of params.
