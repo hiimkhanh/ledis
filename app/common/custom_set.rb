@@ -25,29 +25,13 @@ class CustomSet
     self == other
   end
 
-  def hash
-    @members.reduce(:+){ |n| n.hash }
-  end
-
   def delete(member)
     @members.delete(member) if index(member)
     self
   end
 
-  def difference(other)
-    CustomSet.new(@members.select { |n| other.index(n).nil? })
-  end
-
-  def disjoint?(other)
-    union(other).size == self.size + other.size
-  end
-
   def intersection(other)
     CustomSet.new(@members.select { |n| other.index(n) })
-  end
-
-  def subCustomSet?(other)
-    self.size >= other.size && intersection(other) == other
   end
 
   def union(other)
