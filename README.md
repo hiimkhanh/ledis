@@ -16,24 +16,40 @@ Ruby just like you would use any other general-purpose scripting language.A few 
                                                                                                                       
 ## Usage
 Similar to Redis, Ledis also has some basic method. I implemented throgh API, I think that is good, because the core value of assignment is how to use cache and build data structure to increase application's performance.
-1. String:
+**1. String:**
 
 API | Parameters | Method | Description
 ------------ | ------------- | ------------- | -------------
 ``` /get ``` | ``` key ```| **POST** | Get value from cache by key
 ``` /set ``` | ``` key, value ```| **POST** | Assign new key with value
 
-2. List:
+**2. List:**
 
 API | Parameters | Method | Description
 ------------ | ------------- | ------------- | -------------
 ``` /llen ``` | ``` key ```| **POST** | Return lenght of the list
-``` /rpush ``` | ``` key, value, [value1, value2...optional] ```| **POST** | Append 1 or more values to the list, create list if not exists, return length of list after operation
+``` /rpush ``` | ``` key, value, [value1, value2,...optional] ```| **POST** | Append 1 or more values to the list, create list if not exists, return length of list after operation
 ``` /lpop ``` | ``` key ```| **POST** | Remove and return the first item of the list
 ``` /rpop ``` | ``` key ```| **POST** | Remove and return the last item of the list
 ``` /lrange ``` | ``` key, start, stop ```| **POST** | Return a range of element from the list (zero-based, inclusive of start and stop), start and stop are non-negative integers
 
+**3. Set**
 
+API | Parameters | Method | Description
+------------ | ------------- | ------------- | -------------
+``` /sadd ``` | ``` key, value, [value1, value2,... optional] ```| **POST** | Add values to set stored at key
+``` /scard ``` | ``` key ```| **POST** | Return the number of elements of the set stored at key
+``` /smembers ``` | ``` key ```| **POST** | Return array of all members of set
+``` /srem ``` | ``` key, value, [value1, value2,... optional] ```| **POST** | Remove values from set
+``` /sinter ``` | ``` key1, key2 ```| **POST** | Set intersection among all set stored in specified keys. Return array of members of the result set
+
+**4. Data expire**
+API | Parameters | Method | Description
+------------ | ------------- | ------------- | -------------
+``` /keys ``` || **POST** | List all available keys
+``` /del ``` | ``` key ```| **POST** | Delete a key
+``` /flushdb ``` || **POST** | Clear all keys
+``` /expire ``` |``` key, seconds```| **POST** | Set a timeout on a key, seconds is a positive integer. Return the number of seconds if the timeout is se
 
 
 
