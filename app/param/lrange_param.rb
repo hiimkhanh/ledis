@@ -1,3 +1,0 @@
-class LrangeParam < BaseParam
-  
-end
