@@ -4,6 +4,12 @@ class CacheController < ApplicationController
   before_action :check_set_type, only: [:sadd, :scard, :smembers, :srem]
   before_action :check_value, only: [:set, :rpush, :sadd, :srem]
 
+  def index
+    render json: {
+      message: 'Hello. I am Ledis.'
+    }
+  end
+
   ## String
   def set
     setted = Rails.cache.write(params[:key], params[:value])
