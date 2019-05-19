@@ -11,8 +11,8 @@ Ruby just like you would use any other general-purpose scripting language.A few 
 ## Design
 * Ledis is like a API web application. It will send out the data after a API was called. So like description of the assignment, Ledis have a end point: POST /<any command here>.
 * The architecture of Ledis is very simple. It has a controller whose name is CacheController extends ApplicationController. It used Rails.cache to implement and store data on RAM. Behind the sense, Ledis supported some special data structure to retrive also save data to memory. That picture below is Ledis's architecture: 
-        
-!(https://i.imgur.com/8PeTyc2.png)
+
+![Image of Yaktocat](https://i.imgur.com/8PeTyc2.png)
                                                                                                                       
 ## Usage
 
